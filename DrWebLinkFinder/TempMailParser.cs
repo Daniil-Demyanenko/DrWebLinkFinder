@@ -32,7 +32,7 @@ public class TempMailParser : IDisposable
     {
         while (true)
         {
-            if (cancellationToken.CanBeCanceled) return null;
+            if (cancellationToken.CanBeCanceled) return null!;
 
             var messages = await _client.GetAllMessages();
 
